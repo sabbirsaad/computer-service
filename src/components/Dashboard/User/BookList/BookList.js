@@ -10,7 +10,7 @@ const BookList = () => {
   const [bookings, setbookings] = useState([]);
   useEffect(() => {
     axios
-        .get(`http://localhost:5000/bookings?email=` + loggedInUser.email)
+        .get(`https://repair-geek.onrender.com/bookings?email=` + loggedInUser.email)
         .then((response) => setbookings(response.data))
         .catch((error) => toast.error(error.message));
 },[bookings]);

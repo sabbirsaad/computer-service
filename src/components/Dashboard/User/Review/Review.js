@@ -25,7 +25,7 @@ const Review = () => {
     const loading = toast.loading('Loading...Please Wait!!!');
 
     axios
-    .post('http://localhost:5000/addReview', reviewData)
+    .post('https://repair-geek.onrender.com/addReview', reviewData)
     .then((res) => {
         // res.json();
         toast.success('Thanks for your feedback!');

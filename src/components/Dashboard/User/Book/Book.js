@@ -17,7 +17,7 @@ const Book = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/service/${id}`)
+      .get(`https://repair-geek.onrender.com/service/${id}`)
       .then((res) => setBooking(res.data))
       .catch((err) => toast.error(err.message));
   }, [id]);
@@ -48,7 +48,7 @@ const Book = () => {
     const loading = toast.loading("Loading...Please Wait!!!");
 
     axios
-      .post(`http://localhost:5000/addServiceAppoinment`, serviceDetails)
+      .post(`https://repair-geek.onrender.com/addServiceAppoinment`, serviceDetails)
       .then((response) => {
         if (response.status === 200) {
           toast.success("Your order placed successfully");

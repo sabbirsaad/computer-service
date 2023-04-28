@@ -18,7 +18,7 @@ const MakeAdmin = () => {
     };
 
     axios
-      .post("http://localhost:5000/addAdmin", adminData)
+      .post("https://repair-geek.onrender.com/addAdmin", adminData)
       .then((res) => {
         if (res.status === 200) {
           toast.success("New Admin added successfully");

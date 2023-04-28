@@ -45,7 +45,7 @@ const onSubmit = (data, e) => {
     };
 
     axios
-        .post('http://localhost:5000/addService', serviceData)
+        .post('https://repair-geek.onrender.com/addService', serviceData)
         .then((res) => {
             if (res.status === 200) {
                 toast.success('New Services added successfully');

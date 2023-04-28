@@ -10,7 +10,7 @@ const AppointmentList = () => {
   const [ appointments, setAppointments ] = useState([]);
   useEffect(() => {
     axios
-        .get(`http://localhost:5000/appointments`)
+        .get(`https://repair-geek.onrender.com/appointments`)
         .then((response) => setAppointments(response.data))
         .catch((error) => toast.error(error.message));
 },[appointments]);
@@ -21,7 +21,7 @@ const handleChange = (_id, event) => {
       _id,
   };
   axios
-      .patch(`http://localhost:5000/update/${_id}`, updateStatus)
+      .patch(`https://repair-geek.onrender.com/update/${_id}`, updateStatus)
       .then((res) => {
           if (res.status === 200) {
               toast.success('Status updated successfully!');

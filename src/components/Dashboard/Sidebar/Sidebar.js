@@ -21,7 +21,7 @@ const Sidebar = () => {
   const [admin, setAdmin] = useState(false);
   useEffect(()=>{
     axios 
-        .post('http://localhost:5000/isAdmin',({email:loggedInUser.email}))
+        .post('https://repair-geek.onrender.com/isAdmin',({email:loggedInUser.email}))
         .then((response)=>setAdmin(response.data))
         .catch((error) => toast.error(error.message));
 

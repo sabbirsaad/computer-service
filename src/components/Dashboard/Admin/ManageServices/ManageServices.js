@@ -12,13 +12,13 @@ const ManageServices = () => {
   const [ services, setServices ] = useState([]);
   useEffect(() => {
     axios
-        .get(`http://localhost:5000/services`)
+        .get(`https://repair-geek.onrender.com/services`)
         .then((response) => setServices(response.data))
         .catch((error) => toast.error(error.message));
 },[services])
 const handleDelete = id =>{
  axios
-      .delete(`http://localhost:5000/delete/${id}`)
+      .delete(`https://repair-geek.onrender.com/delete/${id}`)
       .then((res) => {
         if (res.status === 200) {
             toast.success('Item deleted successfully!');

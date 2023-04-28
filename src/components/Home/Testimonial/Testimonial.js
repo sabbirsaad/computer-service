@@ -14,7 +14,7 @@ const Testimonial = () => {
     const [ reviews, setReviews] = useState([]);
     useEffect(() => {
       axios
-          .get(`http://localhost:5000/reviews`)
+          .get(`https://repair-geek.onrender.com/reviews`)
           .then((res) => setReviews(res.data))
           .catch((error) => toast.error(error.message));
   }, [reviews]);

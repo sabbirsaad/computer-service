@@ -14,7 +14,7 @@ const Services = () => {
   const [serviceLists, setServiceLists] = useState([]);
   useEffect(() => {
     axios
-        .get(`http://localhost:5000/services`)
+        .get(`https://repair-geek.onrender.com/services`)
         .then((res) => setServiceLists(res.data))
         .catch((err) => toast.error(err.message));
 }, []);
